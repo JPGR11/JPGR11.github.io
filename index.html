@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mi Blog</title>
+  <meta charset="UTF-8">
+  <!-- iconos -->
+  <script src="https://kit.fontawesome.com/cb693ba2c2.js" crossorigin="anonymous"></script>
+  <style>
+	/* colores:
+color header central #0077b6
+color barra de navegacion #00b4d8
+home: #00b4d8;
+biologia: #2b9348;
+matematicas: #5a189a;
+facebook: #3b5999;
+instagram: #e4405f;
+twitter: #55acee;
+pinterest: #bd081c;
+*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Barra social */
+
+:root {
+  --home: #00b4d8;
+  --biologia: #2b9348;
+  --matematicas: #5a189a;
+  --facebook: #3b5999;
+  --instagram: #e4405f;
+  --twitter: #55acee;
+  --pinterest: #bd081c;
+}
+.redes-sociales {
+  display: flex;
+  height: 20vh;
+  align-items: center;
+  justify-content: center;
+}
+.redes-sociales ul li {
+  display: inline-block;
+  margin: 0 5px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+.redes-sociales ul li a {
+  display: block;
+  padding: 0 10px;
+  background-color: #333;
+  color: #fff;
+  line-height: 50px;
+  font-size: 18px;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.2);
+  transition: 0.2s;
+}
+.redes-sociales ul:hover a {
+  filter: blur(2px);
+}
+.redes-sociales ul li a:hover {
+  transform: translateY(2px) scale(1.05);
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.4);
+  filter: none;
+}
+
+/* Logos redes sociales */
+
+.redes-sociales ul li .home:hover {
+  background: var(--home);
+}
+.redes-sociales ul li .biologia:hover {
+  background: var(--biologia);
+}
+.redes-sociales ul li .matematicas:hover {
+  background: var(--matematicas);
+}
+.redes-sociales ul li .facebook:hover {
+  background: var(--facebook);
+}
+.redes-sociales ul li .instagram:hover {
+  background: var(--instagram);
+}
+.redes-sociales ul li .twitter:hover {
+  background: var(--twitter);
+}
+.redes-sociales ul li .pinterest:hover {
+  background: var(--pinterest);
+}
+
+/* cuerpo */
+
+body {
+  background-color: #caf0f8;
+}
+section {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+main {
+  margin-top: 0px;
+  margin-left: 250px;
+  margin-right: 250px;
+  padding-top: 50px;
+  padding-bottom: 25px;
+  background-color: #90e0ef;
+}
+p {
+  font-family: "Cantarell", sans-serif;
+}
+.aside2 {
+  background-color: #0077b6;
+  width: 40%;
+  padding: 20px;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  position: relative;
+  left: 350px;
+}
+.autor {
+  margin-left: 30px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+}
+#descripcion {
+  padding-bottom: 45px;
+}
+#volver-inicio{
+  padding-top: 30px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  font-family: "Cantarell", sans-serif;
+}
+figcaption{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+/* imagenes */
+
+.imagenes-dentro-section {
+  float: right;
+  padding-top: 30px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+}
+.imagenes {
+  float: left;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+}
+.imagenes2 {
+  float: right;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+}
+#imagenes-footer {
+  float: left;
+  margin-left: 30px;
+  margin-right: 15px;
+}
+
+/* titulos */
+
+.titulos {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Bree Serif", serif;
+}
+#titulo-fuera{
+  padding-top: 10px;
+  padding-left: 30px;
+  font-family: "Bree Serif", serif;
+}
+
+/*biologia*/
+
+#problematicas-ambientales1 {
+  font-family: "Bree Serif", serif;
+  padding-top: 27px;
+}
+#problematicas-ambientales2 {
+  font-family: "Bree Serif", serif;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+#seccion-biologia {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  font-family: "Bree Serif", serif;
+}
+#titulos-queson {
+  padding: 10px;
+  font-family: "Bree Serif", serif;
+}
+#cuales-son {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Bree Serif", serif;
+}
+#problemas-colombia {
+  padding-top: 0px;
+  padding-bottom: 15px;
+  font-family: "Bree Serif", serif;
+}
+#como-prevenir {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Bree Serif", serif;
+}
+#posibles-soluciones {
+  padding-top: 10px;
+  font-family: "Bree Serif", serif;
+}
+#contaminacion-colegios {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Bree Serif", serif;
+}
+#separacion-residuos-organicos {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Bree Serif", serif;
+}
+#nuestro-compromiso {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Bree Serif", serif;
+}
+#importancia-separar-residuos {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Bree Serif", serif;
+}
+
+/* matematicas */
+
+#seccion-matematicas {
+  padding-left: 30px;
+  padding-right: 30px;
+  font-family: "Bree Serif", serif;
+}
+#macroeconomia-en-colombia {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Bree Serif", serif;
+}
+#que-es-macroeconomia {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Bree Serif", serif;
+}
+#macroeconomia {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Bree Serif", serif;
+}
+#politica-fiscal {
+  font-family: "Bree Serif", serif;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+#tipos-de-politica-fiscal {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Bree Serif", serif;
+}
+#mecanismos {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Bree Serif", serif;
+}
+#criticas-politica-fiscal {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Bree Serif", serif;
+}
+
+/* listas */
+
+.listas {
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  font-family: "Cantarell", sans-serif;
+  line-height: 27px;
+}
+#listas-colegio {
+  padding: 15px;
+  padding-bottom: 50px;
+  font-family: "Cantarell", sans-serif;
+  line-height: 27px;
+}
+#lista-fuera{
+  padding-top: 10px;
+  padding-right: 30px;
+  padding-left: 65px;
+  padding-bottom: 30px;
+  font-family: "Cantarell", sans-serif;
+  line-height: 27px;
+}
+
+/* Barra de navegacion */
+
+.container {
+  margin: auto;
+  width: 100%;
+  font-family: "Oswald", sans-serif;
+}
+.navegacion li a {
+  background-color: #00b4d8;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+}
+.menu-de-navegacion > li {
+  float: left;
+  width: 33.33%;
+}
+.menu-de-navegacion {
+  background-color: #00b4d8;
+}
+header li {
+  list-style: none;
+}
+.navegacion li a:hover {
+  background-color: #0077b6;
+}
+.navegacion li ul {
+  display: none;
+  position: absolute;
+  min-width: 140px;
+}
+.navegacion li:hover > ul {
+  display: block;
+}
+.navegacion li ul li {
+  position: relative;
+}
+.navegacion li ul li ul {
+  right: -250px;
+  top: 0px;
+  left: 100%;
+}
+#encabezado {
+  background-color: #0077b6;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 304 304' width='304' height='304'%3E%3Cpath fill='%2362c1f4' fill-opacity='0.35' d='M44.1 224a5 5 0 1 1 0 2H0v-2h44.1zm160 48a5 5 0 1 1 0 2H82v-2h122.1zm57.8-46a5 5 0 1 1 0-2H304v2h-42.1zm0 16a5 5 0 1 1 0-2H304v2h-42.1zm6.2-114a5 5 0 1 1 0 2h-86.2a5 5 0 1 1 0-2h86.2zm-256-48a5 5 0 1 1 0 2H0v-2h12.1zm185.8 34a5 5 0 1 1 0-2h86.2a5 5 0 1 1 0 2h-86.2zM258 12.1a5 5 0 1 1-2 0V0h2v12.1zm-64 208a5 5 0 1 1-2 0v-54.2a5 5 0 1 1 2 0v54.2zm48-198.2V80h62v2h-64V21.9a5 5 0 1 1 2 0zm16 16V64h46v2h-48V37.9a5 5 0 1 1 2 0zm-128 96V208h16v12.1a5 5 0 1 1-2 0V210h-16v-76.1a5 5 0 1 1 2 0zm-5.9-21.9a5 5 0 1 1 0 2H114v48H85.9a5 5 0 1 1 0-2H112v-48h12.1zm-6.2 130a5 5 0 1 1 0-2H176v-74.1a5 5 0 1 1 2 0V242h-60.1zm-16-64a5 5 0 1 1 0-2H114v48h10.1a5 5 0 1 1 0 2H112v-48h-10.1zM66 284.1a5 5 0 1 1-2 0V274H50v30h-2v-32h18v12.1zM236.1 176a5 5 0 1 1 0 2H226v94h48v32h-2v-30h-48v-98h12.1zm25.8-30a5 5 0 1 1 0-2H274v44.1a5 5 0 1 1-2 0V146h-10.1zm-64 96a5 5 0 1 1 0-2H208v-80h16v-14h-42.1a5 5 0 1 1 0-2H226v18h-16v80h-12.1zm86.2-210a5 5 0 1 1 0 2H272V0h2v32h10.1zM98 101.9V146H53.9a5 5 0 1 1 0-2H96v-42.1a5 5 0 1 1 2 0zM53.9 34a5 5 0 1 1 0-2H80V0h2v34H53.9zm60.1 3.9V66H82v64H69.9a5 5 0 1 1 0-2H80V64h32V37.9a5 5 0 1 1 2 0zM101.9 82a5 5 0 1 1 0-2H128V37.9a5 5 0 1 1 2 0V82h-28.1zm16-64a5 5 0 1 1 0-2H146v44.1a5 5 0 1 1-2 0V18h-26.1zm102.2 270a5 5 0 1 1 0 2H98v14h-2v-16h124.1zM242 149.9V160h16v34h-16v62h48v48h-2v-46h-48v-66h16v-30h-16v-12.1a5 5 0 1 1 2 0zM53.9 18a5 5 0 1 1 0-2H64V2H48V0h18v18H53.9zm112 32a5 5 0 1 1 0-2H192V0h50v2h-48v48h-28.1zm-48-48a5 5 0 0 1-9.8-2h2.07a3 3 0 1 0 5.66 0H178v34h-18V21.9a5 5 0 1 1 2 0V32h14V2h-58.1zm0 96a5 5 0 1 1 0-2H137l32-32h39V21.9a5 5 0 1 1 2 0V66h-40.17l-32 32H117.9zm28.1 90.1a5 5 0 1 1-2 0v-76.51L175.59 80H224V21.9a5 5 0 1 1 2 0V82h-49.59L146 112.41v75.69zm16 32a5 5 0 1 1-2 0v-99.51L184.59 96H300.1a5 5 0 0 1 3.9-3.9v2.07a3 3 0 0 0 0 5.66v2.07a5 5 0 0 1-3.9-3.9H185.41L162 121.41v98.69zm-144-64a5 5 0 1 1-2 0v-3.51l48-48V48h32V0h2v50H66v55.41l-48 48v2.69zM50 53.9v43.51l-48 48V208h26.1a5 5 0 1 1 0 2H0v-65.41l48-48V53.9a5 5 0 1 1 2 0zm-16 16V89.41l-34 34v-2.82l32-32V69.9a5 5 0 1 1 2 0zM12.1 32a5 5 0 1 1 0 2H9.41L0 43.41V40.6L8.59 32h3.51zm265.8 18a5 5 0 1 1 0-2h18.69l7.41-7.41v2.82L297.41 50H277.9zm-16 160a5 5 0 1 1 0-2H288v-71.41l16-16v2.82l-14 14V210h-28.1zm-208 32a5 5 0 1 1 0-2H64v-22.59L40.59 194H21.9a5 5 0 1 1 0-2H41.41L66 216.59V242H53.9zm150.2 14a5 5 0 1 1 0 2H96v-56.6L56.6 162H37.9a5 5 0 1 1 0-2h19.5L98 200.6V256h106.1zm-150.2 2a5 5 0 1 1 0-2H80v-46.59L48.59 178H21.9a5 5 0 1 1 0-2H49.41L82 208.59V258H53.9zM34 39.8v1.61L9.41 66H0v-2h8.59L32 40.59V0h2v39.8zM2 300.1a5 5 0 0 1 3.9 3.9H3.83A3 3 0 0 0 0 302.17V256h18v48h-2v-46H2v42.1zM34 241v63h-2v-62H0v-2h34v1zM17 18H0v-2h16V0h2v18h-1zm273-2h14v2h-16V0h2v16zm-32 273v15h-2v-14h-14v14h-2v-16h18v1zM0 92.1A5.02 5.02 0 0 1 6 97a5 5 0 0 1-6 4.9v-2.07a3 3 0 1 0 0-5.66V92.1zM80 272h2v32h-2v-32zm37.9 32h-2.07a3 3 0 0 0-5.66 0h-2.07a5 5 0 0 1 9.8 0zM5.9 0A5.02 5.02 0 0 1 0 5.9V3.83A3 3 0 0 0 3.83 0H5.9zm294.2 0h2.07A3 3 0 0 0 304 3.83V5.9a5 5 0 0 1-3.9-5.9zm3.9 300.1v2.07a3 3 0 0 0-1.83 1.83h-2.07a5 5 0 0 1 3.9-3.9zM97 100a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-48 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 96a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-144a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-96 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm96 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-32 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM49 36a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-32 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM33 68a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 240a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm80-176a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 48a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm112 176a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-16 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 180a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0 16a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm0-32a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM17 84a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm32 64a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm16-16a3 3 0 1 0 0-6 3 3 0 0 0 0 6z'%3E%3C/path%3E%3C/svg%3E");
+  height: 80px;
+  line-height: 80px;
+  font-family: "Bebas Neue", cursive;
+}
+  </style>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cantarell&display=swap" rel="stylesheet">
+
+<body>
+  <header id="header-principal">
+    <div align="center">
+      <h1 id="encabezado">Mi Blog</h1>
+    </div>
+    <div class="container">
+      <nav class="navegacion">
+        <ul class="menu-de-navegacion">
+          <li><a href="#encabezado">Inicio</a></li>
+          <li><a href="#seccion-biologia">Sección biología</a>
+            <ul>
+              <li><a href="#problematicas-ambientales1">Problemáticas ambientales 1</a>
+                <ul>
+                  <li><a href="#titulos-queson">¿Qué son?</a></li>
+                  <li><a href="#cuales-son">¿Cuáles son estos problemas?</a></li>
+                  <li><a href="#problemas-colombia">Problemas en Colombia</a></li>
+                  <li><a href="#posibles-soluciones">Posibles soluciones a estas problemáticas</a></li>
+                </ul>
+              </li>
+              <li><a href="#problematicas-ambientales2">Problemáticas ambientales 2</a>
+                <ul>
+                  <li><a href="#contaminacion-colegios">La contaminación en los colegios</a></li>
+                  <li><a href="#como-prevenir">¿Como prevenir la contaminación en los colegios?</a></li>
+                  <li><a href="#separacion-residuos-organicos">Separación de los residuos orgánicos</a></li>
+                  <li><a href="#nuestro-compromiso">Nuestro compromiso con la gestión de residuos es</a></li>
+                  <li><a href="#importancia-separar-residuos">Importancia de separar los residuos que generamos</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#seccion-matematicas">Sección matemáticas</a>
+            <ul>
+              <li><a href="#macroeconomia">Macroeconomía</a>
+                <ul>
+                  <li><a href="#que-es-macroeconomia">¿Qué es la macroeconomía?</a></li>
+                  <li><a href="#macroeconomia-en-colombia">Macroeconomía en colombia</a></li>
+                </ul>
+              </li>
+              <li><a href="#politica-fiscal">Política fiscal</a>
+                <ul>
+                  <li><a href="#tipos-de-politica-fiscal">Tipos de política fiscal</a></li>
+                  <li><a href="#mecanismos">Mecanismos</a></li>
+                  <li><a href="#criticas-politica-fiscal">Criticas a la política fiscal</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+
+    <!-- BIOLOGIA -->
+
+    <h2 id="seccion-biologia">Sección de Biología</h2>
+    <img src="https://blog.oxfamintermon.org/wp-content/uploads/2016/04/iStock-185939905.jpg" alt="En esta imagen se pueden apreciar los efectos de la deforestación" width="420" height="320" class="imagenes">
+    <section>
+
+      <!-- PRIMER ARTICULO -->
+
+      <article>
+        <h2 id="problematicas-ambientales1">Problemáticas ambientales:</h2>
+        <p>Por: Juan Pablo García Rey</p>
+        <p>19/08/2020</p>
+        <h3 id="titulos-queson">¿Qué son?</h3>
+        <p>Para poder empezar a hablar sobre estos problemas, es recomendable saber el concepto de problemáticas ambientales, y entender que poco a poco los humanos estamos dañando la tierra debido a la cantidad del consumo de los recursos, a continuación menciono la definición de estas.<br>Las problemáticas ambientales nombran a lo que está vinculado con el ambiente (el entorno físico, económico o de otro tipo). También puede entenderse al ambiente como la atmósfera o la naturaleza en general.<br>Los problemas ambientales, por lo tanto, son contrariedades o perturbaciones que se producen en el entorno natural. Puede tratarse del efecto de una contaminación, como un derrame de petróleo en el océano o la emanación de gases tóxicos en la atmósfera.<br>El ser humano es el responsable de los problemas ambientales. Cuando el trastorno se produce por acción de la naturaleza, se habla de un desastre natural (como la erupción de un volcán).<br>La falla en la planta nuclear de Chernóbil que se produjo en 1986 es un claro ejemplo de cómo la actividad humana puede provocar graves problemas ambientales. La explosión en esta central nuclear liberó al ambiente grandes cantidades de óxido de europio, carburo de boro, dióxido de uranio y otras sustancias tóxicas que provocaron cientos de miles de afectados.</p>
+
+        <!-- CUALES SON -->
+
+        <h3 id="cuales-son">¿Cuáles son estos problemas?</h3>
+        <p>Afortunadamente en la actualidad la gente se está volviendo consciente de estos problemas y los están intentando solucionar con diferentes cosas como tecnologías sostenibles entre otras, los problemas que son más graves en la actualidad o que tienen mayor repercusión son:</p>
+        <img src="https://media.iatiseguros.com/wp-content/uploads/2019/05/04011421/cambio-climatico-causas-consecuencias-2.jpg" alt="Una imagen en la cual se pueden apreciar dos lados, uno fertil y vivo y otro muerto y seco" width="500" height="360" class="imagenes2">
+        <ul class="listas">
+          <li><strong>Cambio climático:</strong> Para algunos especialistas en la materia, el ser humano ha ocasionado unos daños al clima y al entorno natural tan graves que ese citado cambio ya es irreversible. No obstante, es vital que se lleven a cabo todas las medidas que resulten oportunas para reducirlo lo máximo posible y para que las consecuencias nefastas sean mínimas.</li>
+          <li><strong>Acidificación del océano:</strong> Otro de los graves problemas ambientales actuales es que la acidez de la superficie del océano ha aumentado de manera alarmante en los últimos dos siglos y medio. Así, se considera que la misma ha crecido un 30%, de forma aproximada, y eso supone un daño irreparable en las especies acuáticas, ya que dicho fenómeno lo que hace es causar daños graves a sus esqueletos.</li>
+          <li><strong>Deforestación:</strong> De la misma manera, no hay que pasar por alto que es preocupante la destrucción que se ha producido en las últimas décadas en cuanto a bosques y masas forestales se refiere. Una situación que destruye multitud de especies vegetales, que acaba con la riqueza medioambiental y que pone en peligro ciertos recursos naturales.</li>
+          <li>El crecimiento del agujero en la capa de ozono debido a las emisiones contaminantes de diversas industrias es otro ejemplo de problema ambiental. Este agujero hace que la capa de ozono no filtre los rayos ultravioleta que proceden del sol, provocando un incremento en el riesgo de alteraciones genéticas y cáncer de piel en los seres humanos.</li>
+        </ul>
+
+        <!-- PROBLEMATICAS EN COLOMBIA -->
+
+        <h3 id="problemas-colombia">Problemas en colombia:</h3>
+        <p>Los problemas ambientales en Colombia, como la contaminación atmosférica o la elevada deforestación, continúan generando costos elevados en materia de salud y deterioro de recursos ambientales.<br>Colombia figuró como el país con mayores problemas ambientales de América Latina, algo alarmante tratándose del segundo país en biodiversidad en el mundo tras albergar el 15% de la fauna y flora de la tierra.<br>Los principales problemas han sido generados por la deforestación, el comercio ilegal de fauna y flora, y la caza. No obstante, han sido las actividades industriales y los fuertes conflictos armados los que a su vez han contribuido a acrecentar la crisis ambiental.<br>Si bien el gobierno ha implementado diferentes políticas, normativas y estatutos medioambientales con el objetivo de mejorar la calidad ambiental, diversos problemas continúan presentes.</p>        
+          <img src="https://t1.ev.ltmcdn.com/es/posts/8/2/1/contaminacion_antropica_o_provocada_por_el_hombre_2128_1_600.jpg" alt="En esta imagen se puede apreciar la contaminacion hídrica de algunos rios colombianos" width="500" height="360" class="imagenes2">       
+        <ul class="listas">
+          <li><strong>Atmósfera:</strong>Según el Instituto de Hidrología, Meteorología y Estudios Ambientales, las ciudades con mayores problemas de contaminación atmosférica son Bogotá y Medellín. Esto debido a que en ellas se condensan una elevada cantidad de contaminantes provenientes de la industria y el transporte. En Colombia, este tipo de contaminación es ocasionada mayoritariamente por las industrias manufactureras y las explotaciones mineras, junto a la quema de materiales agropecuarios y los contaminantes de los automóviles.</li>
+          <li><strong>Contaminación hídrica:</strong>Desde el año 2011, el Instituto Nacional de Salud en Colombia reveló que la mitad de los departamentos del país registran aguas contaminadas que se utilizan para el consumo humano. Una situación alarmante originada porque los principales centros urbanos del interior de Colombia han crecido de forma descontrolada alrededor de cuerpos de agua continentales o marítimos. Existen pésimas condiciones de saneamiento básico, lo que ha contribuido al vertimiento de aguas residuales y una inadecuada disposición de residuos sólidos que suelen ser transportados por los ríos Magdalena, Cauca, San Juan y Patía principalmente. A pesar que Colombia es el sexto país con la mayor oferta de agua en el mundo, el Ministerio de Medio Ambiente calcula que la mitad de sus recursos hídricos se encuentran contaminados. Esto se debe a las inadecuadas formas de explotación minera y las actividades agroindustriales donde químicos y pesticidas son arrojados a las aguas.</li>
+          <li><strong>Chocó biogeográfico:</strong>Una zona que incluye territorios de Colombia, Ecuador y Panamá y alberga más del 10% de la biodiversidad del planeta. El Chocó ocupa aproximadamente el 2% de la superficie terrestre y es uno de los espacios naturales más ricos del mundo. Sin embargo, una gran variedad de ecosistemas y con ellos el 25% de las especies endémicas del mundo, están siendo destruidas. En Colombia tiene presencia en los departamentos del Chocó, Valle del Cauca, Cauca, Nariño y en menor proporción Antioquia. Se encuentra principalmente en peligro debido a las actividades de explotación de recursos naturales y mineros que se han llevado a cabo en la zona, y por la destrucción masiva de árboles y la comercialización ilegal de especies.</li>
+          <li><strong>Elevada deforestación:</strong>La tasa de deforestación en Colombia ha alcanzado niveles alarmantes en los últimos años, situación que se ve reflejada en la pérdida de 178.597 hectáreas de bosque. Dicha tasa aumentó en un 44% debido a la excesiva praderización, ganadería extensiva, cultivos de uso ilícito, desarrollo de infraestructura vial, extracción de minerales y recursos naturales e incendios forestales.</li>
+          <li><strong>Minería ilegal:</strong>Constituye una de las principales amenazas ambientales que enfrenta el país a raíz de la explotación minera de oro a cielo abierto. Se calcula que el país tiene más de 78.939 hectáreas afectadas por las redes criminales. El problema reside en que la actividad ilegal está ocasionando el 46% del daño ecológico en la selva del Chocó. Aunado al hecho de que las redes de narcotráfico y grupos armados se han asentado alrededor de las minas ilegales de oro del Chocó, lo que además de destrucción ambiental ha generado violencia y pobreza.</li>
+        </ul>
+        <aside class="aside2">
+          <p>Afortunadamente debido a la cuarentena la situación ha mejorado, al estar gran parte de las personas en casa cumpliendo con la cuarentena se ha reducido la contaminación, en unas partes del mundo los animales volvieron a lugares donde anteriormente no habitaban debido a los humanos, y entre muchas otras cosas que esta cuarentena trajo. Puede que gran parte de las personas ya están aburridas por la cuarentena, pero tenemos que ver o bueno, el vaso medio lleno en vez de medio vacío</p>
+        </aside>
+
+        <!-- SOLUCIONES-->
+
+        <h3 id="posibles-soluciones">Posibles soluciones a estas problemáticas:</h3>
+        <ol class="listas">
+          <li><strong>Agricultura más responsable:</strong> Aumentar los rendimientos en la agricultura sin aumentar su huella ecológica.</li>
+          <li><strong>Cuidar los bosques:</strong>No arrasar con más bosques y potenciar las explotaciones forestales certificadas. Unos 6.000 metros cuadrados de bosque tropical desaparecen cada segundo.</li>
+          <li><strong>Consumo responsable de agua:</strong> Optimizar el agua que se usa para consumo humano, industrial, agrícola, pecuario, minero entre otros.</li>
+          <li><strong>Menos contaminantes:</strong> Reducir la generación de sustancias contaminantes y peligrosas para darles el uso, almacenamiento, tratamiento y disposición final adecuado.</li>
+          <li><strong>Reducir el desperdicio de alimentos:</strong> Reducir drásticamente las pérdidas y desechos de alimentos que en la actualidad significan cantidades increíbles (30% de la producción mundial que equivale a 1.300 millones de toneladas al año cuando hay en la actualidad 870 millones de personas víctimas de la hambruna).</li>
+          <li><strong>Aprovechar las tierras:</strong> Habilitar las tierras productivas que están degradadas o afectadas por la erosión para minimizar la habilitación de nuevos terrenos agropecuarios.
+
+          </li>
+          <li><strong>Evitar el uso de combustibles:</strong> Reemplazar la actual matriz energética reduciendo drásticamente el uso de combustibles fósiles para dar lugar a las energías alternativas, renovables y limpias. Debe eliminarse los casi 700 mil millones de dólares en subvenciones al sector del petróleo y al carbón para integrar la generación de energías renovables alternativas como la solar, eólica, y otras.</li>
+        </ol>
+
+        <!-- TODO ESTA EN TUS MANOS ASIDE -->
+
+        <aside class="aside2">
+          <h3 class="titulos">Todo está en tus manos</h3>
+          <p>Lograr el cambio es difícil, pero si cada uno pone un granito de arena podremos lograrlo y con esto salvar la tierra, mejorando a su vez nuestras vidas y el futuro de los niños del país y del mundo. Pero necesitamos de tu ayuda.</p>
+        </aside>
+      </article>
+
+      <!-- PROBLEMATICAS AMBIENTALES2 -->
+
+      <article>
+        <h2 id="problematicas-ambientales2">Problemáticas ambientales:</h2>
+        <p>Por: Juan Pablo García Rey</p>
+        <p>21/08/2020</p><br>
+        <p>Después de entender y haber leído sobre las problemáticas ambientales vamos a hablar de las problemáticas ambientales en el ámbito escolar. Cuando estábamos en clases presenciales se podía ver como después de un descanso algunas personas dejaban la basura en el lugar donde pasaron este tiempo, dejando principalmente al trabajo a las personas que colaboran en el colegio, todos sabemos que esto no está bien, tenemos que ayudar con nuestra basura para ayudar a la disminución de la contaminación y a las personas, por lo que si botamos la basura que nosotros mismos hacemos vamos a ayudar al medio ambiente y a las personas que ayudan a limpiar el colegio que ya tienen suficiente trabajo como para que les hagamos recoger nuestra basura. Cuando estés comiendo algo y vayas a dejar el empaque de lo que comiste en el piso piensa si ese es el mundo que le quieres dejar a tus futuros hijos o si ese es el futuro que <strong>TÚ</strong> quieres vivir, siempre ten en mente eso.</p>
+        <aside class="aside2">
+          <h3 class="titulos">Sabemos que...</h3>
+          <p>Sabemos que en nuestra institución educativa los profesores, parte de los estudiantes y las demás personas han colaborado de diferentes maneras para que los estudiantes (nosotros) no dejemos nuestra basura en el suelo, algunas de las formas a las que los profesores y el personero han recurrido son, concursos de recolección de basura, es decir que el salón que más recoja basura gana una ida a la flora. Algunos estudiantes recogen tapas para ayudar con ese tema. Gracias a los esfuerzos de muchas personas el colegio Salesiano mantiene sus pasillos y aulas limpias, hay que darle también un gran reconocimiento a las personas que hacen la limpieza, todos los días hacen un gran esfuerzo para que nuestro colegio este bonito y todos estamos agradecidos con ellos</p>
+        </aside>
+
+        <!-- CONTAMINACION EN LOS COLEGIOS-->
+
+        <h3 id="contaminacion-colegios">La contaminación en los colegios:</h3>
+        <p>La contaminación ambiental empieza desde el momento en el que desechas algún producto y más si lo depositas en lugares no apropiados, lo cual provoca una alteración en el ecosistema, por lo que no debemos tirar basura en la calle, banquetas o fuera de los contenedores apropiados para ello. En el colegio está muy mal que tires la basura fuera de los contendores adecuados ya que da un mal aspecto, causa enfermedades en las personas y contaminación. Existen dos tipos de contaminación en los colegios, las cuales son:</p>
+        <ul class="listas">
+          <li><strong>contaminación en los suelos:</strong>Un suelo se puede degradar al acumularse en él sustancias a unos niveles tales que repercuten negativamente en el comportamiento de los suelos. Las sustancias, a esos niveles de concentración, se vuelven tóxicas para los organismos de este. Se trata pues de una degradación química que provoca la pérdida parcial o total de la productividad del suelo.<br><strong>Ejemplo:</strong> cuando salimos al descanso consumimos nuestros alimentos y no nos percatamos de botar la basura que generamos en sus respectivos lugares.</li><br>
+          <li><strong>Contaminación sónica:</strong> hace referencia al ruido (entendido como sonido excesivo y molesto), provocado por las actividades que generan los estudiantes (en las aulas de clase, horas de descanso, etc.), que produce efectos negativos sobre la salud auditiva, física y mental de las personas. Hoy en día es uno de los principales factores que afecta el normal desarrollo de las actividades en los estudiantes.<br><strong>Ejemplo:</strong> en las horas de clase que el profesor por dicha razón no ha llegado, los estudiantes empiezan a hablar entre sí; pero no lo hacen en un tono moderado si no en un tono muy alto y esto perturba el ambiente</li>
+          <img src="https://www.ecoticias.com/userfiles/extra/YUTW_39.jpg" alt="Conjunto de basuras que se encuentran en un colegio para separar los residuos" width="440" height="300" class="imagenes-dentro-section">
+        </ul>
+
+        <!-- PREVENIR LA CONTAMINACION -->
+
+        <h3 id="como-prevenir">¿Cómo prevenir la contaminación en los colegios?</h3>
+        <ol id="listas-colegio">
+          <li>Instalando puntos ecológicos en puntos estratégicos del colegio, para así maximizar la eficiencia de la recolecta de la basura y así reducir la basura, y con esto la contaminación. </li>
+          <li>Poniendo en cada salón botes de basura que separe los desechos plásticos de los orgánicos.</li>
+          <li>Realizando charlas para concientizar a los estudiantes de la problemática de la contaminación.</li>
+          <li>Realizar jornada de limpieza después de cada descanso, realizadas por los estudiantes para que aprendan a recoger la basura.</li>
+        </ol>
+
+        <!-- SEPARACION DE LOS RESIDUOS ORGANICOS -->
+
+        <h3 id="separacion-residuos-organicos">Separación de los residuos orgánicos:</h3>
+        <p>Es la operación que debe realizar el generador de residuos sólidos para seleccionarlos y almacenarlos en recipientes de diferente color según sea: Orgánicos - Inorgánicos, aprovechables- No aprovechables.<br><br><strong>Inorgánicos:</strong> Son los que por sus características químicas sufren una descomposición natural muy lenta. Muchos de ellos son de origen natural pero no son biodegradables. Ejemplo: Botellas de plástico, vidrio, bolsas, etc.<br><br><strong>Aprovechables:</strong> Son aquellos que tienen la característica de poder ser nuevamente utilizados para la transformación de nuevos productos.<br><br><strong>No aprovechables:</strong> Son los que por sus características químicas no son de utilidad como materias primas en la fabricación de nuevos productos.</p>
+
+        <!-- COMPROMISO CON LA GESTION DE RESIDUOS -->
+
+        <h3 id="nuestro-compromiso">Nuestro compromiso con la gestión de residuos es:</h3>
+        <ul class="listas">
+          <li>Optimizar el uso de recursos materiales</li>
+          <li>Separar adecuadamente los residuos desde la fuente según código de colores.</li>
+          <li>No arrojar residuos sólidos, ni sustancias peligrosas a los sistemas de alcantarillado</li>
+          <li>Usar de forma segura las sustancias químicas.</li>
+          <li>Prevenir y controlar derrames de sustancias químicas.</li>
+        </ul>
+
+        <!-- IMPORTANCIA DE SEPARAR LOS RESIDUOS QUE GENERAMOS -->
+
+        <h3 id="importancia-separar-residuos">Importancia de separar los residuos que generamos:</h3>
+        <ul class="listas">
+          <li>Separar los materiales orgánicos de los inorgánicos, mejora la calidad de vida de todos y hace parte de una nueva cultura ambiental.</li>
+          <li>Reciclar una tonelada de vidrio, permite ahorrar 30 galones de petróleo y el 50% de minerales necesarios para su fabricación.</li>
+          <li>Reciclar aluminio ahorra 95% de energía y el 80% de petróleo y bauxita, necesarios para obtener aluminio.</li>
+          <li>Reutilizar hace que el sitio de disposición final de residuos sólidos tenga una vida útil mucho más amplia.</li>
+          <li>Separar los residuos sólidos es proteger los recursos renovables y no renovables.</li>
+        </ul>
+
+        <!-- ASIDE -->
+
+        <aside class="aside2">
+          <h2 class="titulos">¿Qué es el PRAE?</h2>
+          <p>Son proyectos pedagógicos que promueven el análisis y la comprensión de los problemas y las potencialidades ambientales locales, regionales y nacionales, y generan espacios de participación para implementar soluciones acordes con las dinámicas naturales y socioculturales. La óptica de su quehacer es la formación desde una concepción de desarrollo sostenible, entendido como el aprovechamiento de los recursos en el presente, sin desmedro de su utilización por las generaciones futuras, con referentes espaciotemporales y sobre la base del respeto a la diversidad y a la autonomía y que contempla no sólo aspectos económicos sino sociales, culturales, políticos, éticos y estéticos en pro de una gestión sostenible del entorno</p>
+        </aside>
+      </article>
+    </section>
+	<a href="#encabezado" id="volver-inicio">Volver a inicio</a>
+
+    <!-- MATEMATICAS -->
+
+    <h2 id="seccion-matematicas">Sección matemáticas:</h2>
+    <img src="https://macroeconomia204.files.wordpress.com/2016/04/71202-25.png?w=1075" alt="En esta imagen se ven diferentes monedas, un billete y el mundo de color verde" width="460" height="300" class="imagenes">
+    <section>
+      <article>
+        <h2 id="macroeconomia">Macroeconomía:</h2>
+        <p>Por: Juan Pablo García Rey</p>
+        <p>22/08/2020</p>
+
+        <!-- QUE ES LA MACROECONOMIA -->
+
+        <h3 id="que-es-macroeconomia">¿Qué es la macroeconomía?</h3>
+        <p>Colombia continúa manteniendo un sólido marco macroeconómico. Los componentes principales de este marco incluyen la adopción de un régimen de metas de inflación, un tipo de cambio flexible, una Regla Fiscal (2011) para el gobierno central y un marco fiscal de mediano plazo.</p>
+        <h3 id="macroeconomia-en-colombia">Macroeconomía en colombia:</h3>
+        <img src="https://www.kienyke.com/sites/default/files/wp-content/uploads/2019/05/Crecimiento-economia.jpg" alt="Imagen de una bandera de colombia con unas escaleras hechas con monedas" width="500" height="360" class="imagenes-dentro-section">
+        <p>El presidente Iván Duque Márquez, comenzó su mandato presidencial el 7 de agosto de 2018, el cual terminará el 7 de agosto de 2022. Duque, del partido Centro Democrático, ganó las elecciones al lograr el 53,95% de la votación (10.351.304 votos), mientras su rival Gustavo Petro alcanzó el 41,83% (8.024.697 votos). Los principales pilares de su gobierno son la legalidad, el emprendimiento, y la equidad, con ejes transversales en materia de: infraestructura, sostenibilidad ambiental e innovación.<br><br>Colombia ha recibido un flujo masivo y acelerado de migrantes desde Venezuela. Según Migración Colombia, hasta diciembre de 2019, cerca de 1.8 millones de migrantes venezolanos han llegado al país. Colombia ha asumido un papel de liderazgo en la adopción de una política de fronteras abiertas y en la implementación de buenas prácticas en la respuesta a áreas receptoras y la prestación de servicios a la población venezolana y colombiana retornada, en áreas como educación hasta salud, servicios de empleo y ayuda humanitaria.<br><br>Colombia tiene un historial de gestión macroeconómica y fiscal prudente, y a pesar de las desaceleraciones económicas ha mantenido su calificación de grado de inversión desde 2013. Después de desacelerarse a 1.4% en 2017, el crecimiento económico se aceleró a 3.3% en 2019, impulsado por un sólido consumo privado y mayor inversión. El crecimiento estaba encaminado a acelerarse aún más en 2020, pero con la pandemia de COVID-19 se espera que se afecte significativamente el consumo privado y la inversión.<br><br>En respuesta a la crisis del COVID-19, el Gobierno implementó medidas de respuesta de emergencia temprana: declaró el estado de emergencia, cerró las fronteras del país e impuso una cuarentena obligatoria. El Gobierno también anunció un paquete considerable de estímulo fiscal (COP 14.8 billones o 1.4% del PIB, con potencial para aumentar hasta 48 billones) que proporcionaría recursos adicionales para el sistema de salud, líneas especiales de crédito para empresas en ciertos sectores, y mayores transferencias para grupos vulnerables. Otras medidas incluyen aplazamientos en la recaudación tributaria en sectores seleccionados y aranceles más bajos para las importaciones estratégicas de salud.<br><br>En marzo de 2020, el Banco Central redujo su tasa de intervención en 50 puntos básicos e introdujo una amplia gama de medidas para aumentar la liquidez. Se espera que el paquete de ayudas, hasta la fecha, sea financiado ampliamente con recursos del Fondo de Ahorro y Estabilización (FAE) y del Fondo Nacional de Pensiones de las Entidades Territoriales (Fonpet).<br><br>Con el aumento del gasto público se espera mitigar, en parte, el impacto de la crisis en 2020, incluyendo las consecuencias para las empresas y los trabajadores. Se prevé que las presiones de la deuda externa en el corto plazo sean limitadas, considerando que los recursos para el paquete de estímulos provendrán de los fondos de ahorro existentes. Las expectativas también apuntan a que el gobierno continúe cumpliendo con la regla fiscal, la cual permite una mayor flexibilidad dado el precio del petróleo y la desaceleración del ciclo económico.<br><br>Un fuerte repunte en el crecimiento se prevé para 2021-2022, siempre que la pandemia sea de corta duración. Se espera que el entorno de bajas tasas de interés, facilitadas por el Banco Central, impulsen el crecimiento del consumo privado. Esto, una vez que se hayan aliviado las medidas de contención doméstica y se facilite un repunte gradual de la inversión, a medida que los proyectos de infraestructura importantes como las carreteras 4G y los proyectos del metro de Bogotá se reanuden por completo.<br><br>Se espera que la inflación permanezca dentro del rango objetivo del Banco Central, debido a que la debilidad de la demanda atenuará las presiones del efecto traspaso (pass-through) del tipo de cambio. Sin embargo, se espera que los bajos precios del petróleo y las reducciones en la demanda global causen un deterioro en el déficit de cuenta corriente hasta 5.3% del PIB en 2020, antes de recuperarse a 4.7% en 2021-2022.<br><br>Colombia continúa manteniendo un sólido marco macroeconómico. Los componentes principales de este marco incluyen la adopción de un régimen de metas de inflación, un tipo de cambio flexible, una Regla Fiscal (2011) para el gobierno central y un marco fiscal de mediano plazo. El sólido marco macroeconómico también ha permitido fortalecer la resiliencia frente a las conmociones externas, facilitando el ajuste económico interno y externo ante los posibles choques.<br><br>En el futuro, las perspectivas dependen de la duración y la gravedad de la crisis y la capacidad del país para recuperarse rápidamente, mientras se abordan los cuellos de botella estructurales existentes.</p>
+        <aside class="aside2">
+          <h3 class="titulos">Economía en la pandemia</h3>
+          <p>Todos somos conscientes de que la pandemia ha afectado mucho al país y a todos los países, se sabe que se hace todo por resolver los problemas que esta trajo y que se hace todo para que la inflación permanezca dentro del rango objetivo del banco central.</p>
+        </aside>
+      </article>
+      <article>
+
+        <!-- POLITICA FISCAL -->
+
+        <h2 id="politica-fiscal">Política fiscal:</h2>
+        <p>Por: Juan Pablo García Rey</p>
+        <p>22/08/2020</p>
+        <p>La política fiscal es una rama de la política económica que configura el presupuesto del Estado, y sus componentes, el gasto público y los impuestos, como variables de control para asegurar y mantener la estabilidad económica, amortiguando las variaciones de los ciclos económicos, y contribuyendo a mantener una economía creciente, de pleno empleo y con baja inflación.1​ El nacimiento de la teoría macroeconómica keynesiana puso de manifiesto que las medidas de la política fiscal influyen en gran medida en las variaciones a corto plazo de la producción, el empleo y los precios.</p>
+        <img src="https://investiga.banrep.gov.co/sites/default/files/styles/730x500/public/publicaciones-730x410-espe90.png?itok=M1FlKeiH" alt="Una imagen en donde se puede ver a colombia con un circulo de personas y un banco en la parte de abajo" width="500" height="360" class="imagenes-dentro-section">
+
+        <!-- TIPOS DE POLITICA FISCAL -->
+
+        <h3 id="tipos-de-politica-fiscal">Tipos de politica fiscal:</h3>
+        <p><strong>Política fiscal expansiva:</strong>Su objetivo es estimular la demanda agregada, especialmente cuando la economía está atravesando un período de recesión y necesita un impulso para expandirse. Como resultado se tiende al déficit o incluso puede provocar inflación. Los mecanismos a usar son:</p>
+        <ul class="listas">
+          <li>Aumentar el gasto público, para aumentar la producción y reducir el desempleo.</li>
+          <li>Bajar los impuestos, para aumentar la renta disponible de las personas físicas, lo que provocará un mayor consumo y una mayor inversión de las empresas, en conclusión, un desplazamiento de la demanda agregada en sentido expansivo. De esta forma, al haber mayor gasto público, y menores impuestos, el presupuesto del Estado, genera el déficit. Después se puede decir que favorece el gasto fiscal en el impuesto presupuestario.</li>
+        </ul>
+        <p><strong>Política fiscal contractiva:</strong> Cuando existe una situación inflacionista provocada por un exceso de demanda agregada. En este caso sería necesaria una aplicación de política fiscal restrictiva, procediendo de forma contraria para reducir el gasto agregado. Se aumentarían los impuestos. Se reduciría el gasto público. Se actuaría para desalentar las inversiones privadas y las exportaciones netas (menores exportaciones netas).</p><br>
+        <p><strong>Política fiscal restrictiva:</strong> Su objetivo es frenar la demanda agregada, por ejemplo cuando la economía está en un período de excesiva expansión y tiene necesidad de frenarse por la excesiva inflación que está creando. Como resultado se tiende al superávit.<br>Los mecanismos son los contrarios que en la expansiva:</p>
+        <ul class="listas">
+          <li>Reducir el gasto público, para bajar la demanda agregada y por tanto la producción.</li>
+          <li>Subir los impuestos, para que los ciudadanos tengan una renta menor y en consecuencia disminuyan su consumo y así la demanda agregada se desplaza hacia la izquierda.</li>
+        </ul>
+
+        <!-- HISTORIA ASIDE -->
+
+        <aside class="aside2">
+          <h3 class="titulos">Historia:</h3>
+          <p>La política fiscal es la propuesta por John Maynard Keynes, que propone teorías innovadoras. Por ejemplo:</p>
+          <ul class="listas">
+            <li>Dice que la ley de Say ("la oferta genera su propia demanda") no se cumple, ya que puede haber equilibrio económico aunque exista mucho paro.</li>
+            <li>Cree que el Estado es quien debe intentar resolver el problema del paro (a diferencia de los clásicos y los monetaristas, que creen que se soluciona por sí solo). Para hacerlo, el estado tiene que controlar la demanda agregada a través de esta política fiscal.</li>
+            <li>El estado de pleno empleo es algo transitorio, y la economía es fluctuante.</li>
+          </ul>
+          <p>Estas teorías revolucionarias dan comienzo a la macroeconomía como ciencia.</p>
+        </aside>
+
+        <!-- MECANISMOS -->
+
+        <h3 id="mecanismos">Mecanismos:</h3>
+        <p>Los dos mecanismos de control sugeridos por los keynesianos (los seguidores de la política fiscal) son:</p>
+        <ul class="listas">
+          <li>Variación del gasto público</li>
+          <li>Variación de los impuestos</li>
+        </ul>
+        <p>De los dos, es más importante el control de la inversión pública. Pero si hay que elegir entre hacer que el Estado gaste más o bajar los impuestos, los políticos suelen preferir lo segundo, porque es inmediato, reversible, y les da buena fama. A continuación se explica cada uno de estos métodos.</p>
+        <h4 class="titulos">Variación del gasto público:</h4>
+	    <img src="https://static.wixstatic.com/media/e33cdb_cf34f444f6c947d6b646acdd2bfc5c13~mv2.png/v1/fill/w_541,h_442,al_c,lg_1,q_85/que_es_gasto.webp" alt="Una imagen en donde se puede ver diferentes edificioss que representan diferentes empresas del Estado" class="imagenes2">
+        <p>El gasto público es la cantidad de dinero que el estado utiliza para el cumplimiento de sus funciones. Suele estar formado por: En primer lugar, los salarios de los funcionarios del estado. En segundo lugar, por inversiones en infraestructuras públicas (construcción de carreteras, puentes, presas, salud, vivienda). En tercer lugar, por inversiones realizadas por empresas y organismos descentralizados, tanto de manera cotidiana como en casos de emergencia, generando en algunos casos ganancias y en otros déficits. Estas erogaciones se expresan en el presupuesto público.<br><br> Cuando un gobierno altera las compras de bienes y servicios del Estado, logra desplazar la curva de demanda agregada. Supongamos, por ejemplo, que el Ministerio de Fomento de un país contrata la construcción de una nueva autopista a una empresa constructora por valor de 3000 millones de euros. Esta contratación eleva la demanda de producción de las constructoras implicadas, lo que induce a las empresas del sector a contratar más trabajadores y a aumentar la producción. Como las constructoras forman parte de la economía, el aumento de la demanda de la autopista se traduce en un aumento de la demanda agregada de bienes y servicios del país. La curva de demanda agregada se desplaza hacia la derecha, incrementándose el PIB, en la medida que uno de los componentes de éste es el gasto público.<br><br> En un primer momento podría pensarse que la curva de demanda agregada se desplaza hacia la derecha exactamente en 3000 millones de euros, que es el dinero gastado en la construcción. Sin embargo, no es así. Se producen dos efectos macroeconómicos que hacen que la magnitud del desplazamiento de la demanda agregada sea diferente de la variación de las compras del Estado. El primero -el efecto multiplicador- sugiere que el desplazamiento de la demanda agregada podría ser superior a 3000 millones de euros que era el gasto realizado. El segundo efecto a tener en cuenta es el efecto expulsión.</p>
+
+        <!-- EFECTO MULTIPLICADOR -->
+
+        <h4 class="titulos">Efecto multiplicador:</h4>
+        <p>Según el mecanismo keynesiano del multiplicador, un aumento de la inversión eleva la renta de los consumidores, provocando una cadena de aumentos del gasto en cascada pero cada vez menores. Las variaciones de la inversión se multiplican, pues, traduciéndose en aumentos mayores de la producción.<br><br> El mecanismo del multiplicador no se aplica sólo a la inversión sino que tiene un carácter mucho más amplio. En realidad, cualquier variación del gasto público también se traduce en una variación mayor de la producción. Esta cuestión, analizada por primera vez por Keynes, llevó a muchos economistas a recomendar la utilización de la política fiscal como instrumento para estabilizar el ciclo económico. Sin embargo muchos economistas sostienen, a su vez, que el multiplicador keynesiano no tiene una aplicación real en el aspecto macroeconómico. Es decir, no es algo que se pueda aplicar masivamente ni rígidamente, puesto que las necesidades, ingresos y también preferencias de los consumidores, son variables y están en continuo cambio.</p>
+
+        <!-- EFECTO EXPULSION -->
+
+        <h4 class="titulos">Efecto expulsión:</h4>
+        <p>El segundo efecto influyente para determinar la cuantía del efecto total de la política fiscal de gasto sobre la demanda agregada es el denominado efecto-expulsión, que sugiere que el efecto que tendría el gasto de 3000 millones de euros sobre el PIB, en el ejemplo anteriormente expuesto, podría ser inferior a 3000 millones.<br><br> Aunque el efecto multiplicador sugiere que la variación de la demanda provocada por la política fiscal puede ser mayor que la variación de las compras del Estado, existe otro efecto que actúa en sentido contrario. Aunque un aumento de las compras del Estado estimula la demanda de bienes y servicios, también provoca una subida del tipo de interés, la cual tiende a atemperar la demanda de bienes y servicios. La reducción que experimenta la demanda cuando una expansión fiscal eleva el tipo de interés se denomina efecto expulsión.<br><br> Para ver por qué se produce este efecto-expulsión, comprobemos una vez más qué ocurre cuando el Estado construye la autopista por valor de 3000 millones de euros. Como ya hemos señalado, este aumento de la demanda eleva las rentas de los trabajadores y de los propietarios de estas empresas (y como consecuencia del efecto multiplicador, también de otras empresas). Al aumentar la renta, los hogares planean comprar más bienes y servicios y, como consecuencia, deciden tener una parte mayor de su riqueza en un activo líquido. Es decir, el aumento de la renta provocado por la expansión fiscal eleva la demanda de dinero, que debemos recordar es una función dependiente, entre otros factores, de la Renta monetaria de los sujetos. Como el banco central no ha alterado la oferta monetaria, la curva de oferta vertical no varía. Cuando el aumento del nivel de renta desplaza la curva de demanda de dinero hacia la derecha, el tipo de interés debe subir con el fin de mantener equilibradas la oferta y la demanda de dinero.<br><br> La subida del tipo de interés reduce, a su vez, la cantidad demandada de bienes y servicios. En particular, como será más caro pedir préstamos la demanda de inversión tanto en viviendas y como en las empresas disminuye. En definitiva el aumento de las compras del Estado que eleva la demanda de bienes y servicios, también puede expulsar inversión. Este efecto-expulsión contrarresta en parte la influencia de las compras del Estado en la demanda agregada.<br><br> Recapitulando, cuando un Estado incrementa sus compras en 3000 millones de euros, la demanda agregada de bienes y servicios puede aumentar en una cuantía superior o inferior a 3000 millones, dependiendo de que sea mayor el efecto multiplicador o el efecto-expulsión.</p>
+
+        <!-- VARIACION DE LOS IMPUESTOS -->
+
+		<img src="https://idealbridge.cl/wp-content/uploads/2016/07/activo.jpg" alt="Se puede ver una balanza entre un simbolo de dinero y cosas materiales que utilizamos mucho todos los días" class="imagenes2">
+        <h3 class="titulos">Variación de los impuestos</h3>
+        <p>La otra gran herramienta de la política fiscal es el nivel de tributación. Cuando el gobierno de un país baja los impuestos, aumentan los ingresos netos de los hogares. Estos ahorran parte de esta renta adicional, pero también gastan alguna en bienes de consumo. Como la reducción de los impuestos eleva el gasto de consumo, desplaza la curva de demanda agregada hacia la derecha. Asimismo, una subida de los impuestos reduce el gasto de consumo y desplaza la curva de demanda agregada hacia la izquierda. En la magnitud del desplazamiento de la demanda agregada provocado por una modificación de los impuestos también influyen el efecto multiplicador y el efecto-expulsión. Cuando el gobierno baja los impuestos y estimula el gasto de consumo, los ingresos y los beneficios aumentan, lo que estimula todavía más el gasto de consumo. Este es el efecto multiplicador. Al mismo tiempo, un aumento de la renta eleva la demanda de dinero, lo que tiende a elevar los tipos de interés. La subida de los tipos de interés encarece la petición de préstamos, lo cual reduce el gasto de inversión. Este es el efecto-expulsión. Dependiendo de la magnitud del efecto multiplicador y del efecto-expulsión, el desplazamiento de la demanda agregada puede ser mayor o menor que la variación de los impuestos que lo ha provocado.</p>
+
+        <!-- CRITICAS A LA POLITICA FISCAL -->
+
+        <h3 id="criticas-politica-fiscal">Críticas  a la política fiscal:</h3>
+        <p>La política fiscal dejó de ser efectiva en los años 70, porque no pudo resolver la situación conocida ahora como estanflación, que consiste en la coexistencia simultánea de una fuerte inflación y a la vez una alta tasa de desempleo, motivada por la crisis del petróleo de 1973. Otras críticas que recibe la política fiscal son:</p>
+        <ul class="listas">
+          <li><strong>Efecto expulsión:</strong> En caso de recesión se aplica una política expansiva: se aumenta el gasto público o se bajan los impuestos. Para poder financiarse, el Estado necesita dinero, y lo encuentra en el mercado privado: vendiendo títulos de deuda pública. Al vender tantos, el precio de los títulos baja, y la gente compra más ya que parecen rentables. Al final, la gente está invirtiendo mucho en el Estado, pero no en el mercado privado, que era lo que se pretendía. En resumen, puede bajar la demanda de inversión cuando lo que se esperaba era que aumentara.</li>
+          <li><strong>Provoca déficit comercial:</strong> En el caso anterior (se emite Deuda pública para financiarse), si los títulos los compran los extranjeros, la moneda propia subirá de valor. Eso hará que bajen las exportaciones (porque a los de fuera les sale más caro comprar), y no es bueno que pase eso en una fase de recesión.</li>
+          <li><strong>Retrasos:</strong> Para que funcione bien la política fiscal, hay que tener muy en cuenta el ciclo económico, ya que si se aplica una política restrictiva durante un período de recesión, será un fracaso. Este tipo de recomendaciones son de carácter heterodoxo, y se basan en la idea de que aplicar políticas restrictivas en la parte descendente del ciclo económico, no hará más que acentuarlo.</li>
+          <li><strong>Propensión al consumo, no constante:</strong> Los clásicos opinan que no siempre vamos a gastar el mismo porcentaje de nuestra renta; por tanto, la propensión marginal al consumo (o al ahorro) no es constante. Además, depende mucho de cada tipo de persona y de la forma en la cual se financió el ingreso de dichas personas. Un aumento de los ingresos en periodo de inflación, no tendría el mismo valor que en una economía estable. Por ende tendría más efectos negativos.</li>
+          <li><strong>Planes fiscales que no se llevan a la práctica:</strong> En muchos países en desarrollo, hay discrepancias entre los anuncios y las políticas efectivamente implementadas por los gobiernos. En el caso de América Latina y el Caribe, 11 países (de una muestra de 20) alcanzaron en 2016 resultados fiscales peores a los anticipados en los presupuestos. En seis de esos casos, los presupuestos anunciaban superávits fiscales, y sin embargo, la política fiscal terminó siendo deficitaria. Un mecanismo importante para reducir este tipo de discrepancias es a través del fortalecimiento de las instituciones presupuestarias, que son las reglas y procedimientos que afectan la manera en que los presupuestos se diseñan, aprueban, e implementan, de acuerdo con el artículo De los planes fiscales a su implementación efectiva: el papel de las instituciones presupuestarias.</li>
+        </ul>
+      </article>
+    </section>
+	<h3 id="titulo-fuera">Bibliografía:</h3>
+	<ul id="lista-fuera">
+		<li><a href="https://www.eldiario.com.co/seccion-d/stella-calvoveapues-com/retos-ambientales-de-colombia-para-el-2020/">Retos ambientales de Colombia</a></li>
+		<li><a href="https://es.mongabay.com/2019/11/colombia-contaminacion-en-el-rio-atrato/#:~:text=La%20contaminaci%C3%B3n%20por%20mercurio%20y%20cianuro%20proveniente%20de%20las%20actividades,Foto%3A%20Frederick%20Gillingham.">Contaminación en los ríos</a></li>
+		<li><a href="https://es.slideshare.net/JULIANA-01/problematica-ambiental-en-mi-colegio-y-municipio">Problemáticas ambientales en los colegios y los municipios</a></li>
+		<li><a href="http://preservacion-del-medio-ambiente.blogspot.com/2011/08/contaminacion-en-los-colegios.html">Contaminación en los colegios</a></li>
+		<li><a href="https://es.wikipedia.org/wiki/Pol%C3%ADtica_fiscal">Política fiscal</a></li>
+		<li><a href="https://www.bancomundial.org/es/country/colombia/overview#:~:text=Colombia%20contin%C3%BAa%20manteniendo%20un%20s%C3%B3lido,marco%20fiscal%20de%20mediano%20plazo.">Macroeconomía </a></li>
+	</ul>
+    <hr>
+    <p class="autor"><strong>Autor:</strong> Juan Pablo García Rey</p>
+    <p class="autor">23/08/2020</p>
+    <img src="https://i.pinimg.com/236x/55/7a/ee/557aee3ce530f6ae193cdb08a384ad3c.jpg" width="120" height="100" id="imagenes-footer">
+    <p id="descripcion">Hola mi nombre es Juan Pablo García como mencione con anterioridad, espero que les haya gustado mi blog le metí mucho esfuerzo. Escogí estos temas porque me parece que son interesantes y necesarios debido a que día a día tratamos con estos sin siquiera saberlo. Haciendo este blog aprendí mucho debido a que leí mucho para saber qué información debía poner.</p>
+  </main>
+  <footer>
+    <div class="redes-sociales">
+      <ul>
+        <li><a href="#encabezado" class="home"><i class="fas fa-home"></i></a></li>
+        <li><a href="#seccion-biologia" class="biologia"><i class="fas fa-leaf"></i></a></li>
+        <li><a href="#seccion-matematicas" class="matematicas"><i class="fas fa-comment-dollar"></i></a></li>
+        <li><a href="https://www.facebook.com/juanpablo.garciarey.393" class="facebook"><i class="fab fa-facebook-f"></i></a></li>
+        <li><a href="https://www.instagram.com/juanpablogarcia1106/" class="instagram"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://twitter.com/JuanPab38986703" class="twitter"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://co.pinterest.com/juanpablogarcia1124/boards/" class="pinterest"><i class="fab fa-pinterest-p"></i></a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
